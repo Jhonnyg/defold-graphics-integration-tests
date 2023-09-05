@@ -1,0 +1,52 @@
+name: "model"
+tags: "background"
+vertex_program: "/assets/materials/cubemap_reflection.vp"
+fragment_program: "/assets/materials/cubemap_background.fp"
+vertex_space: VERTEX_SPACE_LOCAL
+vertex_constants {
+  name: "mtx_world"
+  type: CONSTANT_TYPE_WORLD
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "mtx_view"
+  type: CONSTANT_TYPE_VIEW
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "mtx_proj"
+  type: CONSTANT_TYPE_PROJECTION
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+vertex_constants {
+  name: "mtx_normal"
+  type: CONSTANT_TYPE_NORMAL
+  value {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+}
+samplers {
+  name: "tex_skybox"
+  wrap_u: WRAP_MODE_CLAMP_TO_EDGE
+  wrap_v: WRAP_MODE_CLAMP_TO_EDGE
+  filter_min: FILTER_MODE_MIN_LINEAR
+  filter_mag: FILTER_MODE_MAG_LINEAR
+}

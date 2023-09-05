@@ -1,0 +1,16 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 3840
+height = 2160
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = 09-paged-atlas
+

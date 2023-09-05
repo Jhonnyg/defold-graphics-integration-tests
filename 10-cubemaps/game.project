@@ -1,0 +1,43 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+render = /main/main.renderc
+
+[script]
+shared_state = 1
+
+[display]
+width = 1920
+height = 1080
+
+[android]
+input_method = HiddenInputField
+package = com.defold.example.basic3d
+
+[project]
+title = 10-cubemaps
+dependencies#0 = https://github.com/Jhonnyg/vantage/archive/refs/heads/master.zip
+
+[physics]
+type = 3D
+
+[osx]
+bundle_identifier = com.defold.example.basic3d
+
+[ios]
+bundle_identifier = com.defold.example.basic3d
+
+[render]
+clear_color_alpha = 1.0
+clear_color_red = 0.25
+clear_color_green = 0.25
+clear_color_blue = 0.25
+
+[input]
+game_binding = /vantage/vantage.input_bindingc
+
+[shader]
+output_spirv = 1
+
+[graphics]
+texture_profiles = /main/default.texture_profiles
+
