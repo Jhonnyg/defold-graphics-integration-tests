@@ -1,0 +1,177 @@
+name: "main"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "embedded_components {\n"
+  "  id: \"model\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/builtins/assets/meshes/quad.dae\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"{{NAME}}\\\"\\n"
+  "materials {\\n"
+  "  name: \\\"default\\\"\\n"
+  "  material: \\\"/main/custom_vx_formats_1.material\\\"\\n"
+  "  textures {\\n"
+  "    sampler: \\\"tex0\\\"\\n"
+  "    texture: \\\"/builtins/assets/images/logo/logo_256.png\\\"\\n"
+  "  }\\n"
+  "  attributes {\\n"
+  "    name: \\\"my_color_3\\\"\\n"
+  "    double_values {\\n"
+  "      v: 1.0\\n"
+  "      v: 0.0\\n"
+  "      v: 0.0\\n"
+  "    }\\n"
+  "  }\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -0.501294
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "go1"
+  data: "embedded_components {\n"
+  "  id: \"model\"\n"
+  "  type: \"model\"\n"
+  "  data: \"mesh: \\\"/builtins/assets/meshes/quad.dae\\\"\\n"
+  "skeleton: \\\"\\\"\\n"
+  "animations: \\\"\\\"\\n"
+  "default_animation: \\\"\\\"\\n"
+  "name: \\\"{{NAME}}\\\"\\n"
+  "materials {\\n"
+  "  name: \\\"default\\\"\\n"
+  "  material: \\\"/main/custom_vx_formats_2.material\\\"\\n"
+  "  textures {\\n"
+  "    sampler: \\\"tex0\\\"\\n"
+  "    texture: \\\"/builtins/assets/images/logo/logo_256.png\\\"\\n"
+  "  }\\n"
+  "  attributes {\\n"
+  "    name: \\\"my_color_4\\\"\\n"
+  "    double_values {\\n"
+  "      v: 0.0\\n"
+  "      v: 1.0\\n"
+  "      v: 0.0\\n"
+  "      v: 0.0\\n"
+  "    }\\n"
+  "  }\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 1.00955\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: -0.501294
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "go2"
+  data: "components {\n"
+  "  id: \"camera1\"\n"
+  "  component: \"/main/camera.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  property_decls {\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 0.7854\\n"
+  "near_z: 0.1\\n"
+  "far_z: 1000.0\\n"
+  "auto_aspect_ratio: 1\\n"
+  "orthographic_projection: 0\\n"
+  "orthographic_zoom: 1.0\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 3.311053
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
