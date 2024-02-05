@@ -1,0 +1,9 @@
+script: "/main/default.render_script"
+render_resources {
+  name: "test"
+  path: "/builtins/materials/sprite.material"
+}
+render_resources {
+  name: "my_rt"
+  path: "/main/my_rt.render_target"
+}

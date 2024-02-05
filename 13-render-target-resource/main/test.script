@@ -1,0 +1,7 @@
+go.property("my_rt", resource.texture())
+
+function init(self)
+	pprint(resource.get_render_target_info("/main/my_rt.render_targetc"))
+	pprint(resource.get_render_target_info(self.my_rt))
+	--go.set("/go1#model", "texture0", hash("/main/my_rt.render_targetc"))
+end

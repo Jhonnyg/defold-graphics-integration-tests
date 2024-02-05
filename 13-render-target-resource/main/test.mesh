@@ -1,0 +1,4 @@
+material: "/builtins/materials/model.material"
+vertices: "/main/box.buffer"
+textures: "/main/my_rt.render_target"
+primitive_type: PRIMITIVE_TRIANGLES

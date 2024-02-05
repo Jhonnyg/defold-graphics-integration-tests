@@ -1,0 +1,13 @@
+mesh: "/builtins/assets/meshes/quad.dae"
+skeleton: ""
+animations: ""
+default_animation: ""
+name: "test"
+materials {
+  name: "default"
+  material: "/builtins/materials/model.material"
+  textures {
+    sampler: "tex0"
+    texture: "/main/my_rt.render_target"
+  }
+}
