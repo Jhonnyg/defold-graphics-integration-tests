@@ -13,7 +13,7 @@ height = 640
 input_method = HiddenInputField
 
 [project]
-title = render-target-resource
+title = 13-render-target-resource
 
 [render]
 clear_color_red = 0.25
