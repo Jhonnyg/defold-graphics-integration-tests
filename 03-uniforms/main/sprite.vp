@@ -1,6 +1,5 @@
 uniform highp mat4 view_proj;
 
-// positions are in world space
 attribute highp vec4 position;
 attribute mediump vec2 texcoord0;
 
@@ -11,6 +10,5 @@ uniform lowp vec4 tint;
 void main()
 {
     gl_Position = view_proj * vec4(position.xyz * tint.x, 1.0);
-    //gl_Position = view_proj * vec4(position.xyz, 1.0);
     var_texcoord0 = texcoord0;
 }

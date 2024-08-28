@@ -1,0 +1,17 @@
+// positions are in world space
+in vec4 position;
+in vec2 texcoord0;
+
+uniform vp_uniforms
+{
+    mat4 view_proj;
+    vec4 tint;
+};
+
+out vec2 var_texcoord0;
+
+void main()
+{
+    gl_Position = view_proj * vec4(position.xyz * tint.x, 1.0);
+    var_texcoord0 = texcoord0;
+}

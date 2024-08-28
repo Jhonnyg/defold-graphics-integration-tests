@@ -1,7 +1,7 @@
 name: "sprite"
 tags: "tile"
-vertex_program: "/main/sprite.vp"
-fragment_program: "/main/sprite.fp"
+vertex_program: "/main/sprite_140.vp"
+fragment_program: "/main/sprite_140.fp"
 vertex_constants {
   name: "view_proj"
   type: CONSTANT_TYPE_VIEWPROJ

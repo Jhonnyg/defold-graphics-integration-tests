@@ -5,39 +5,51 @@ embedded_instances {
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/builtins/graphics/particle_blob.tilesource\\\"\\n"
-  "default_animation: \\\"anim\\\"\\n"
+  "  data: \"default_animation: \\\"anim\\\"\\n"
   "material: \\\"/main/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/builtins/graphics/particle_blob.tilesource\\\"\\n"
+  "}\\n"
   "\"\n"
   "  position {\n"
-  "    x: 138.821\n"
+  "    x: 24.48348\n"
   "    y: 147.41\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
   "  }\n"
   "  scale {\n"
-  "    x: 7.773\n"
-  "    y: 7.773\n"
-  "    z: 7.773\n"
+  "    x: 3.73104\n"
+  "    y: 3.73104\n"
+  "    z: 3.73104\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite1\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"anim\\\"\\n"
+  "material: \\\"/main/sprite_140.material\\\"\\n"
+  "size {\\n"
+  "  x: 32.0\\n"
+  "  y: 32.0\\n"
+  "}\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/builtins/graphics/particle_blob.tilesource\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 226.93431\n"
+  "    y: 147.41\n"
+  "  }\n"
+  "  scale {\n"
+  "    x: 3.73104\n"
+  "    y: 3.73104\n"
+  "    z: 3.73104\n"
   "  }\n"
   "}\n"
   ""
   position {
     x: 160.76
     y: -18.3
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
   }
   scale3 {
     x: 2.307
@@ -50,35 +62,6 @@ embedded_instances {
   data: "components {\n"
   "  id: \"asd\"\n"
   "  component: \"/main/asd.gui\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "  property_decls {\n"
-  "  }\n"
   "}\n"
   ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
 }
