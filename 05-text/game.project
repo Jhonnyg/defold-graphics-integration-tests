@@ -10,3 +10,7 @@ input_method = HiddenInputField
 [project]
 title = 05-text
 
+[render]
+clear_color_red = 0.0
+clear_color_green = 1.0
+

@@ -19,12 +19,8 @@ embedded_instances {
   "}\\n"
   "text: \\\"Basic Text Support\\\"\\n"
   "font: \\\"/builtins/fonts/debug/always_on_top.font\\\"\\n"
-  "material: \\\"/builtins/fonts/label.material\\\"\\n"
+  "material: \\\"/main/label.material\\\"\\n"
   "\"\n"
-  "  position {\n"
-  "    x: -160.29529\n"
-  "    y: -28.96568\n"
-  "  }\n"
   "  scale {\n"
   "    x: 2.08868\n"
   "    y: 2.08868\n"
@@ -32,13 +28,4 @@ embedded_instances {
   "  }\n"
   "}\n"
   ""
-  position {
-    x: 846.995
-    y: 388.066
-  }
-  scale3 {
-    x: 2.187
-    y: 2.187
-    z: 2.187
-  }
 }
