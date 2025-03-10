@@ -1,0 +1,21 @@
+go.property("input", resource.texture())
+
+function init(self)
+	local t_backing = resource.create_texture("/my_backing_texture.texturec", {
+		type   = resource.TEXTURE_TYPE_IMAGE_3D,
+		width  = 32,
+		height = 32,
+		depth  = 32,
+		format = resource.TEXTURE_FORMAT_RGBA32F,
+		flags  = resource.TEXTURE_USAGE_FLAG_STORAGE + resource.TEXTURE_USAGE_FLAG_SAMPLE,
+	})
+
+	local textures = {
+		backing = resource.get_texture_info(t_backing).handle,
+		input = resource.get_texture_info(self.input).handle
+	}
+
+	pprint(textures)
+
+	msg.post("@render:", "add_textures", textures)
+end

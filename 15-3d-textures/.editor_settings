@@ -1,0 +1,39 @@
+{
+  :code {
+    :find {
+      :term "texture_in"
+    }
+  }
+  :open-assets {
+    :term "input.cpp"
+  }
+  :search-in-files {
+    :exts ""
+    :include-libraries true
+    :term "Click("
+  }
+  :workflow {
+    :recent-files [
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
+        "/main/test.script"
+        :code
+      ]
+      [
+        "/main/default.render_script"
+        :code
+      ]
+      [
+        "/main/test.cp"
+        :code
+      ]
+    ]
+  }
+}
