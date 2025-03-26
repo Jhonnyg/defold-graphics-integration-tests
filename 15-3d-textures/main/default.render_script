@@ -123,12 +123,12 @@ function update(self)
     render.set_blend_func(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)
     render.disable_state(render.STATE_CULL_FACE)
 
-    -- render.enable_texture(0, self.backing_texture)
+    render.enable_texture("texture_sampler", self.backing_texture)
     
     render.draw(self.tile_pred, {frustum = frustum})
     render.draw(self.particle_pred, {frustum = frustum})
 
-    render.disable_texture(0)
+    render.disable_texture("texture_sampler")
     
     render.draw_debug3d()
 

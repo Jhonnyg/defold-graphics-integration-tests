@@ -15,15 +15,11 @@
   :workflow {
     :recent-files [
       [
-        "/game.project"
+        "/main/test.compute"
         :cljfx-form-view
       ]
       [
-        "/main/main.collection"
-        :scene
-      ]
-      [
-        "/main/test.script"
+        "/builtins/materials/sprite.fp"
         :code
       ]
       [
@@ -31,7 +27,31 @@
         :code
       ]
       [
+        "/main/sprite.material"
+        :cljfx-form-view
+      ]
+      [
+        "/main/main.collection"
+        :scene
+      ]
+      [
         "/main/test.cp"
+        :code
+      ]
+      [
+        "/main/sprite.fp"
+        :code
+      ]
+      [
+        "/main/test.script"
+        :code
+      ]
+      [
+        "/game.project"
+        :cljfx-form-view
+      ]
+      [
+        "/test.appmanifest"
         :code
       ]
     ]

@@ -1,8 +1,63 @@
 go.property("input", resource.texture())
 
+function create_and_set(self)
+
+	local tbuffer = buffer.create(8 * 8 * 8, { {name=hash("rgba"), type=buffer.VALUE_TYPE_FLOAT32, count=4} } )
+	local tstream = buffer.get_stream(tbuffer, hash("rgba"))
+
+	local index = 1
+	for z=1,8 do
+		for y=1,8 do
+			for x=1,8 do
+				tstream[index + 0] = x
+				tstream[index + 1] = y
+				tstream[index + 2] = z
+				tstream[index + 3] = 1.0
+				index = index + 4
+			end
+		end
+	end
+
+	local t_args = {
+		type   = graphics.TEXTURE_TYPE_IMAGE_3D,
+		width  = 8,
+		height = 8,
+		depth  = 8,
+		format = resource.TEXTURE_FORMAT_RGBA32F
+	}
+	
+	local t_backing = resource.create_texture("/my_backing_texture_set.texturec", t_args) -- , tbuffer)
+
+	resource.set_texture(t_backing, t_args, tbuffer)
+
+	local t_args_sub = {
+		width  = 1,
+		height = 1,
+		depth  = 1,
+		type   = graphics.TEXTURE_TYPE_IMAGE_3D,
+		format = resource.TEXTURE_FORMAT_RGBA32F,
+		x      = 1,
+		y      = 1,
+		z      = 1,
+	}
+
+	local tbuffer_sub = buffer.create(1 * 1 * 1, { {name=hash("rgba"), type=buffer.VALUE_TYPE_FLOAT32, count=4} } )
+	local tstream_sub = buffer.get_stream(tbuffer_sub, hash("rgba"))
+
+	tstream_sub[1] = 99
+	tstream_sub[2] = 98
+	tstream_sub[3] = 97
+	tstream_sub[4] = 98
+
+	resource.set_texture(t_backing, t_args_sub, tbuffer_sub)
+end
+
 function init(self)
+
+	create_and_set(self)
+	
 	local t_backing = resource.create_texture("/my_backing_texture.texturec", {
-		type   = resource.TEXTURE_TYPE_IMAGE_3D,
+		type   = graphics.TEXTURE_TYPE_IMAGE_3D,
 		width  = 32,
 		height = 32,
 		depth  = 32,
@@ -15,7 +70,7 @@ function init(self)
 		input = resource.get_texture_info(self.input).handle
 	}
 
-	pprint(textures)
-
 	msg.post("@render:", "add_textures", textures)
+
+	go.animate("/go1#sprite", "depth", go.PLAYBACK_LOOP_PINGPONG, vmath.vector4(1, 0, 0, 0), go.EASING_INOUTCUBIC, 2)
 end

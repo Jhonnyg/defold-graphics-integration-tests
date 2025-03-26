@@ -17,4 +17,3 @@ title = 15-3d-textures
 
 [shader]
 output_spirv = 1
-
