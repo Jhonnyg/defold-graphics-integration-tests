@@ -1,4 +1,4 @@
-mesh: "/builtins/assets/meshes/cube.dae"
+mesh: "/builtins/assets/gltf/cube.gltf"
 material: "/builtins/materials/model.material"
 textures: "/assets/images/green.png"
 skeleton: ""
