@@ -1,4 +1,4 @@
-mesh: "/builtins/assets/meshes/cube.dae"
+mesh: "/builtins/assets/gltf/cube.gltf"
 skeleton: ""
 animations: ""
 default_animation: ""

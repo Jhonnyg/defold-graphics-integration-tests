@@ -3,10 +3,10 @@
 -- Copyright 2009-2014 Ragnar Svensson, Christian Murray
 -- Licensed under the Defold License version 1.0 (the "License"); you may not use
 -- this file except in compliance with the License.
--- 
+--
 -- You may obtain a copy of the License, together with FAQs at
 -- https://www.defold.com/license
--- 
+--
 -- Unless required by applicable law or agreed to in writing, software distributed
 -- under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 -- CONDITIONS OF ANY KIND, either express or implied. See the License for the
@@ -52,10 +52,10 @@ function init(self)
     self.fs_quad = render.predicate({"fs_quad"})
 
     self.clear_color = vmath.vector4(0, 0, 0, 0)
-    self.clear_color.x = sys.get_config("render.clear_color_red", 0)
-    self.clear_color.y = sys.get_config("render.clear_color_green", 0)
-    self.clear_color.z = sys.get_config("render.clear_color_blue", 0)
-    self.clear_color.w = sys.get_config("render.clear_color_alpha", 0)
+    self.clear_color.x = sys.get_config_number("render.clear_color_red", 0)
+    self.clear_color.y = sys.get_config_number("render.clear_color_green", 0)
+    self.clear_color.z = sys.get_config_number("render.clear_color_blue", 0)
+    self.clear_color.w = sys.get_config_number("render.clear_color_alpha", 0)
 
     self.view = vmath.matrix4()
 
@@ -69,14 +69,14 @@ function init(self)
     self.projection_fn = stretch_projection
 
     local color_params = {
-        format = render.FORMAT_RGBA,
+        format = graphics.TEXTURE_FORMAT_RGBA,
         width  = 512,
         height = 512,
     }
-    self.my_render_target = render.render_target({[render.BUFFER_COLOR_BIT] = color_params})
+    self.my_render_target = render.render_target({[graphics.BUFFER_TYPE_COLOR0_BIT] = color_params})
 
-    local rt_w = render.get_render_target_width(self.my_render_target, render.BUFFER_COLOR0_BIT)
-    local rt_h = render.get_render_target_height(self.my_render_target, render.BUFFER_COLOR0_BIT)
+    local rt_w = render.get_render_target_width(self.my_render_target, graphics.BUFFER_TYPE_COLOR0_BIT)
+    local rt_h = render.get_render_target_height(self.my_render_target, graphics.BUFFER_TYPE_COLOR0_BIT)
 
     assert(rt_w == 512)
     assert(rt_h == 512)
@@ -94,12 +94,12 @@ function update(self)
 
     render.set_render_target(self.my_render_target)
     render.set_viewport(0, 0, 512, 512)
-    render.clear({[render.BUFFER_COLOR_BIT] = vmath.vector4(0.5, 0, 1, 1),  [render.BUFFER_DEPTH_BIT] = 1, [render.BUFFER_STENCIL_BIT] = 0})
+    render.clear({[graphics.BUFFER_TYPE_COLOR0_BIT] = vmath.vector4(0.5, 0, 1, 1),  [graphics.BUFFER_TYPE_DEPTH_BIT] = 1, [graphics.BUFFER_TYPE_STENCIL_BIT] = 0})
     render.set_render_target(render.RENDER_TARGET_DEFAULT)
 
     -- clear screen buffers
     --
-    render.clear({[render.BUFFER_COLOR_BIT] = self.clear_color, [render.BUFFER_DEPTH_BIT] = 1, [render.BUFFER_STENCIL_BIT] = 0})
+    render.clear({[graphics.BUFFER_TYPE_COLOR0_BIT] = self.clear_color, [graphics.BUFFER_TYPE_DEPTH_BIT] = 1, [graphics.BUFFER_TYPE_STENCIL_BIT] = 0})
 
     -- render world (sprites, tilemaps, particles etc)
     --
@@ -111,19 +111,19 @@ function update(self)
     render.set_projection(proj)
 
     render.set_depth_mask(false)
-    render.disable_state(render.STATE_DEPTH_TEST)
-    render.disable_state(render.STATE_STENCIL_TEST)
-    render.enable_state(render.STATE_BLEND)
-    render.set_blend_func(render.BLEND_SRC_ALPHA, render.BLEND_ONE_MINUS_SRC_ALPHA)
-    render.disable_state(render.STATE_CULL_FACE)
+    render.disable_state(graphics.STATE_DEPTH_TEST)
+    render.disable_state(graphics.STATE_STENCIL_TEST)
+    render.enable_state(graphics.STATE_BLEND)
+    render.set_blend_func(graphics.BLEND_FACTOR_SRC_ALPHA, graphics.BLEND_FACTOR_ONE_MINUS_SRC_ALPHA)
+    render.disable_state(graphics.STATE_CULL_FACE)
 
     render.draw(self.tile_pred, {frustum = frustum})
     render.draw(self.particle_pred, {frustum = frustum})
-    
-    render.enable_texture(0, self.my_render_target, render.BUFFER_COLOR0_BIT)
+
+    render.enable_texture(0, self.my_render_target, graphics.BUFFER_TYPE_COLOR0_BIT)
     render.draw(self.fs_quad)
     render.disable_texture(0)
-    
+
     render.draw_debug3d()
 
     -- render GUI
@@ -135,10 +135,10 @@ function update(self)
     render.set_view(view_gui)
     render.set_projection(proj_gui)
 
-    render.enable_state(render.STATE_STENCIL_TEST)
+    render.enable_state(graphics.STATE_STENCIL_TEST)
     render.draw(self.gui_pred, {frustum = frustum_gui})
     render.draw(self.text_pred, {frustum = frustum_gui})
-    render.disable_state(render.STATE_STENCIL_TEST)
+    render.disable_state(graphics.STATE_STENCIL_TEST)
 end
 
 function on_message(self, message_id, message)

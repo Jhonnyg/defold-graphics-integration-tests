@@ -1,4 +1,4 @@
-mesh: "/builtins/assets/meshes/sphere.dae"
+mesh: "/builtins/assets/gltf/sphere.gltf"
 material: "/builtins/materials/model.material"
 textures: "/assets/cubemaps/skybox.cubemap"
 skeleton: ""

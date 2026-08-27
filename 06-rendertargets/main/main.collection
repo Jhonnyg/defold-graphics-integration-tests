@@ -42,7 +42,7 @@ embedded_instances {
   data: "embedded_components {\n"
   "  id: \"model\"\n"
   "  type: \"model\"\n"
-  "  data: \"mesh: \\\"/builtins/assets/meshes/quad_2x2.dae\\\"\\n"
+  "  data: \"mesh: \\\"/builtins/assets/gltf/quad_2x2.gltf\\\"\\n"
   "material: \\\"/main/sprite.material\\\"\\n"
   "skeleton: \\\"\\\"\\n"
   "animations: \\\"\\\"\\n"
