@@ -1,0 +1,29 @@
+{
+  :code {
+    :breakpoints [
+    ]
+    :find {
+      :term "m_Context"
+    }
+  }
+  :open-assets {
+    :term "render_script"
+  }
+  :search-in-files {
+    :exts ""
+    :include-libraries false
+    :term "set_texture"
+  }
+  :workflow {
+    :recent-files [
+      [
+        "/main/test.script"
+        :code
+      ]
+      [
+        "/main/test.cp"
+        :code
+      ]
+    ]
+  }
+}
